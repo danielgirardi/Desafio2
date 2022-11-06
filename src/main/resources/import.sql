@@ -1,0 +1,1 @@
+ insert into product( category, code, codigo_barra, color, description, manufacturing_date, material, name, price, quantity, serie, tax, validation_date )  values ('alimento', 'df1234', '3456789', 'amarelo', 'descricao 1', '2022/10/10', 'grao', 'cafe', 10.90, 5, 'n/a', 0.30, '2023/10/10')
