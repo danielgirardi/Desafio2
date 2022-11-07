@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Builder
 @With
 @Entity
-@Table(name = "product") //seria o nome da tabela no spring
+@Table(name = "product") //nome da tabela no spring
 public class Product {
 
     @Id
