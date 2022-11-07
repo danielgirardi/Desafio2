@@ -16,8 +16,8 @@ public class StockService {
 
     @Autowired
     private ProductRepository repository;
-    @Autowired
-    private StockManagement stockManagement;
+    //@Autowired
+   // private StockManagement stockManagement;
 
     @GetMapping("/findAll")
     public List<Product> findAll(){
@@ -26,7 +26,7 @@ public class StockService {
     }
 
     public void addProduct(Product product){
-        stockManagement.addProduct(product);
+       // stockManagement.addProduct(product);
     }
 
     @GetMapping("/daniel")
