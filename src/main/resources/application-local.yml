@@ -1,1 +1,33 @@
 #h2 database
+
+# Dados de conexão com o banco H2
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  
+  # Configuração do cliente web do banco H2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  # Configuração para mostrar o SQL no console (não usar hibernate), usar SpringDate (JPA)
+  jpa:
+    database-platforma: org.hibernate.dialect.H2Dialect
+    properties.hibernate.show_sql: true
+    show-sql: true
+  properties:
+    hibernate:
+      format_sql: true
+
+  #Flayway Database //peguei no youtube
+
+  #spring.datasource.url=jdbc:h2:mem:mydb
+  #spring.datasource.driver-class-name=org.h2.Driver
+  #spring.datasource.username=sa
+  #spring.datasource.password=
+  #spring.jpa.hibernate.ddl-auto=create
+  #spring.jackson,deserialization.fail-on-unknown-properties=true
+  #spring.jackson.date-format=yyyy-MM-dd

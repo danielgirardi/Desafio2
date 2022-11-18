@@ -1,1 +1,9 @@
-#PostgreSql
+#PostgreSql  (ambiente simulando produção, desenvolvedor pode fazer qualquer alteração, ex: testes de API)
+
+datasource:
+  driver-class-name: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/Stock
+  username: postgres
+  password: postgres
+
+
