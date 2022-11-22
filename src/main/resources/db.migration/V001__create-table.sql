@@ -1,5 +1,3 @@
-//criei igual dos guris (nao usar). OBS/: posso utilizar no pgAdmin
-
 CREATE TABLE tbl_products(
     product_id serial primary key,
     product_name varchar(100) not null,

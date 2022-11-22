@@ -42,4 +42,13 @@ public class StockResource {
     public Product editProduct (@PathVariable("code") String code, @RequestBody Product product){
         return service.editProduct(code, product);
    }
+
+   // lançar exceção
+//    @Override
+//    public .... findByid(Integer id){
+//        Optinal<> obj = repository.findByid(id);
+//        return obj.orElseThrow(() new ProductNotFoubdException("Objeto não encontrado"));
+//    }
+
+
 }
