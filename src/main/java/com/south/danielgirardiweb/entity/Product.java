@@ -34,7 +34,7 @@ public class Product implements Serializable {
     @Column(name = "category", nullable = false)
     public String category;
 
-    @Column(name = "codigoBarra", nullable = false)
+    @Column(name = "codigo_barra", nullable = false)
     public long codigoBarra;
 
     @Column(name = "serie", nullable = false)
