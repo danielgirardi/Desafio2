@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Builder
 @With
 @Entity
-@Table(name = "product") //nome da tabela no spring
+@Table(name = "Product") //nome da tabela no spring
 public class Product implements Serializable {
 
     @Id

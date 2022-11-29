@@ -10,8 +10,6 @@ services:
       - db
     depends_on:
       - db
-    environment:
-      - POSTGRES_URL_DB=jdbc:postgresql://db:5432/DB_desafio2
 
   db:
     container_name: db

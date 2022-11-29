@@ -1,5 +1,13 @@
 spring:
   datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5435/DB_desafio2
     username: postgres
     password: postgres
-    url: ${POSTGRES_URL_DB}
+
+  flyway:
+    user: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5435/DB_desafio2
+    locations:
+      - classpath:db/migration

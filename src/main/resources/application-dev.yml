@@ -1,11 +1,17 @@
 #PostgreSql  (ambiente simulando produção, desenvolvedor pode fazer qualquer alteração, ex: testes de API)
 
-datasource:
-  driver-class-name: org.postgresql.Driver
-  url: jdbc:postgresql://localhost:5432/Stock
-  username: postgres
-  password: postgres
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/Stock
+    username: postgres
+    password: postgres
 
+  flyway:
+    user: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5433/Stock
 
+  #drop n create table again, good for testing, comment this in production
 
 
