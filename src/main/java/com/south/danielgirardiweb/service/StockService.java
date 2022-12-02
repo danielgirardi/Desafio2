@@ -30,6 +30,7 @@ public class StockService {
     //edit
     public Product editProduct (String code, Product product) {
         repository.deleteById(code);
+        product.setCode(code);
         repository.save(product);
 
         return product;

@@ -8,6 +8,7 @@
 //
 //    //https://www.youtube.com/watch?v=AKT9FYJBOEo
 //    @InjectMocks
+//    @Test
 //    @Mock
 //    StockService stockService;
 //
@@ -16,3 +17,5 @@
 //    void
 //
 //}
+//
+
