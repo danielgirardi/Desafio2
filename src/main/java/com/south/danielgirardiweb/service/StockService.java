@@ -16,18 +16,18 @@ public class StockService {
     @Autowired
     private ProductRepository repository;
 
-    //add
+
     public Product addProduct(Product product){
         product.setCode(getCode());
         return repository.save(product);
     }
 
-    //delete
+
     public void removeProduct (String code){
         repository.deleteById(code);
     }
 
-    //edit
+
     public Product editProduct (String code, Product product) {
         repository.deleteById(code);
         product.setCode(code);
