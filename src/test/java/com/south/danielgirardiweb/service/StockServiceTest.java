@@ -10,12 +10,15 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.*;
 
 @SpringBootTest
 class StockServiceTest {
@@ -71,11 +74,19 @@ class StockServiceTest {
     }
 
     @Test
-    void removeProduct() {
+    void whenRemoveProductThenReturnSucess() {
+
+        doNothing().when(repository).deleteById(anyString());
+
+        service.removeProduct("1234abcd");
     }
 
     @Test
     void editProduct() {
+
+        
+
+
     }
 
     @Test
