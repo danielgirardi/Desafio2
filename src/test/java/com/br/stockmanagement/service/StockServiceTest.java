@@ -1,27 +1,28 @@
-package com.south.danielgirardiweb.service;
+package com.br.stockmanagement.service;
 
-import com.south.danielgirardiweb.entity.Product;
-import com.south.danielgirardiweb.respository.ProductRepository;
-import org.junit.jupiter.api.Assertions;
+import com.br.stockmanagement.entity.Product;
+import com.br.stockmanagement.respository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
+@AutoConfigureMockMvc // isac inseriu na call
 class StockServiceTest {
+
+    private MockMvc mockMvc;
 
     public static final double PRICE = 10.90;
     public static final int QUANTITY = 2;
@@ -73,18 +74,46 @@ class StockServiceTest {
        assertEquals(TAX, response.getTax());
     }
 
+   // @Test
+    //void whenRemoveProductThenReturnSucess() {
+
+        //doNothing().when(repository).deleteById(anyString());
+
+        //service.removeProduct("1234abcd");
+   // }
+
     @Test
-    void whenRemoveProductThenReturnSucess() {
+    void whenEditProductThenReturnSucess() {
 
-        doNothing().when(repository).deleteById(anyString());
+        when(repository.save(Mockito.any(Product.class))).thenReturn(product);
 
-        service.removeProduct("1234abcd");
+        String code = "2454eokd";
+        Product response = service.editProduct(code, product);
+
+
+        assertNotNull(response);
+        assertEquals(Product.class, response.getClass());
+        assertEquals(code, response.getCode());
+        assertEquals(NAME, response.getName());
+        assertEquals(PRICE, response.getPrice());
+        assertEquals(QUANTITY, response.getQuantity());
+        assertEquals(CATEGORY, response.getCategory());
+        assertEquals(CODIGO_BARRA, response.getCodigoBarra());
+        assertEquals(SERIE, response.getSerie());
+        assertEquals(DESCRIPTION, response.getDescription());
+        assertEquals(TAX, response.getTax());
+
     }
 
     @Test
-    void editProduct() {
+    void whenEditProductThenReturnAnDataIntegrityViolationException(){
 
-        
+
+
+    // add (número negativo pode ser uma exceção)
+    //edit (editar produto sem ter)
+    // remove (remover produto quando não houver)
+
 
 
     }
