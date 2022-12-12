@@ -1,4 +1,4 @@
-package com.br.stockmanagement.service;
+package com.south.stockmanagement.service;
 
 import com.br.stockmanagement.entity.Product;
 import com.br.stockmanagement.respository.ProductRepository;

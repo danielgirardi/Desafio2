@@ -1,7 +1,7 @@
-package com.br.stockmanagement.service;
+package com.south.stockmanagement.service;
 
-import com.br.stockmanagement.entity.Product;
-import com.br.stockmanagement.respository.ProductRepository;
+
+import com.south.stockmanagement.respository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -14,9 +14,9 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.when;
 
 @SpringBootTest
 @AutoConfigureMockMvc // isac inseriu na call

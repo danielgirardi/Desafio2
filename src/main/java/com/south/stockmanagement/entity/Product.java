@@ -1,5 +1,4 @@
-package com.br.stockmanagement.entity;
-
+package com.south.stockmanagement.entity;
 import lombok.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;

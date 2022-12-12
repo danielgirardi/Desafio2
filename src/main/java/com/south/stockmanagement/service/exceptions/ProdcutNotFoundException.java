@@ -1,4 +1,4 @@
-package com.br.stockmanagement.service.exceptions;
+package com.south.stockmanagement.service.exceptions;
 
 public class ProdcutNotFoundException extends RuntimeException{
 

@@ -1,4 +1,4 @@
-package com.br.stockmanagement.resources;
+package com.south.stockmanagement.resources;
 
 import com.br.stockmanagement.entity.Product;
 import com.br.stockmanagement.service.StockService;

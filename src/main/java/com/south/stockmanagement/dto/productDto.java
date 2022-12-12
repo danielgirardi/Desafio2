@@ -1,4 +1,4 @@
-package com.br.stockmanagement.dto;
+package com.south.stockmanagement.dto;
 
 public class productDto {
 }
