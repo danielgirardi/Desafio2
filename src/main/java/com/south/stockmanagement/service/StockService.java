@@ -1,7 +1,7 @@
 package com.south.stockmanagement.service;
 
-import com.br.stockmanagement.entity.Product;
-import com.br.stockmanagement.respository.ProductRepository;
+import com.south.stockmanagement.entity.Product;
+import com.south.stockmanagement.respository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

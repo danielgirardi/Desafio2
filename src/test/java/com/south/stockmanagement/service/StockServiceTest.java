@@ -1,6 +1,7 @@
 package com.south.stockmanagement.service;
 
 
+import com.south.stockmanagement.entity.Product;
 import com.south.stockmanagement.respository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

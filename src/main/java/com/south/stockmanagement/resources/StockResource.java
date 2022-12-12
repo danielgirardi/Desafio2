@@ -1,7 +1,7 @@
 package com.south.stockmanagement.resources;
 
-import com.br.stockmanagement.entity.Product;
-import com.br.stockmanagement.service.StockService;
+import com.south.stockmanagement.entity.Product;
+import com.south.stockmanagement.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ import java.util.List;
 
 //@Component
 @RestController
-@RequestMapping("/desafio2")
+@RequestMapping("/stockManagement")
 public class StockResource {
 
     @Autowired
