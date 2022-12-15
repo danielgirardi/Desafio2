@@ -40,9 +40,9 @@ public class StockResource {
         return service.editProduct(code, product);
    }
 
-    @PostMapping("/import")
+    @PostMapping("/importProducts")
     public void uploadFile(@RequestParam("file") MultipartFile file) {
-        service.save(file);
+        service.importProducts(file);
     }
 
 

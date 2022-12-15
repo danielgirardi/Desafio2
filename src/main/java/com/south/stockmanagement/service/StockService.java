@@ -57,7 +57,7 @@ public class StockService {
     }
 
 
-    public void save(MultipartFile file) {
+    public void importProducts(MultipartFile file) {
         try {
             Reader reader = new InputStreamReader(file.getInputStream());
             CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build();
