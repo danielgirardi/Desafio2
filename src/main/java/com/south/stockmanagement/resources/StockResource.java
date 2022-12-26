@@ -12,7 +12,7 @@ import java.util.List;
 
 //@Component
 @RestController
-@RequestMapping("/stockManagement")
+@RequestMapping("/produto-api")
 public class StockResource {
 
     @Autowired
