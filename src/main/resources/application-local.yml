@@ -23,6 +23,17 @@ spring:
     hibernate:
       format_sql:
 
+  rabbitmq:
+    spring.rabbitmq.host=localhost
+    spring.rabbitmq.port=8080
+    spring.rabbitmq.username=admin
+    spring.rabbitmq.password=123456
+
+  server.port=8080
+
+
+
+
 
   #Flayway Database //peguei no youtube
 

@@ -11,3 +11,17 @@ spring:
     url: jdbc:postgresql://localhost:5433/Stock
     locations:
       - classpath:db/migration
+
+  services:
+    rabbitmq:
+      image: rabbitmq:3-management
+      container_name: rabbitmq
+      restart: always
+      ports:
+        - 8080:8080
+        - 15672:15672
+      volumes:
+        - ./dados:/var/lib/rabbitmq/ # criar uma pasta de DADOS e inserir o diretório aqui do rabbit (depois do : é o container)
+      environment:
+        - RABBITMQ_DEFAULT_USER=admin
+        - RABBITMQ_DEFAULT_PASS=123456

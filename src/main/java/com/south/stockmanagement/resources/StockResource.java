@@ -1,6 +1,8 @@
 package com.south.stockmanagement.resources;
 
+import com.south.stockmanagement.constantes.RabbitmqConstantes;
 import com.south.stockmanagement.entity.Product;
+import com.south.stockmanagement.service.RabbitmqService;
 import com.south.stockmanagement.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +19,9 @@ public class StockResource {
 
     @Autowired
     private StockService service;
+
+    @Autowired
+    private RabbitmqService rabbitmqService;
 
     @GetMapping("/findAllProducts")
     public List<Product> findAll() {
@@ -45,5 +50,12 @@ public class StockResource {
         service.importProducts(file);
     }
 
+    @PutMapping
+    private ResponseEntity alteraEstoque (@RequestBody EstoqueDto estoqueDto){
+
+
+        this.rabbitmqService.enviaMensagem(RabbitmqConstantes.FILA_ESTOQUE, estoqueDto);
+        return new ResponseEntity(HttpStatus.OK);
+    }
 
 }
